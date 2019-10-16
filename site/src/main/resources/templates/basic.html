@@ -1,0 +1,19 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <title>基础数据上传页面</title>
+</head>
+<body>
+<center><h2 th:inline="text">这是基础数据的上传页面</h2>
+<p th:text="${name}"></p>
+<form action="/upload/basic" method="POST" enctype="multipart/form-data">
+    <div>选择要上传的文件,必须是Excel2007以上的版本(以.xlsx结尾)</div><br/>
+    <input  type="file"  name="file"/>
+    <br/>
+    <button style="color: red">提交了</button>
+</form>
+</center>
+</body>
+</html>
